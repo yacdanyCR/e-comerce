@@ -55,6 +55,12 @@ footer{
     cursor: pointer;
 }
 
+.form__h1--title{
+    font-weight: 700;
+    font-style: normal;
+    color: var(--var--background-darkColor);
+}
+
 /* Responsive */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
