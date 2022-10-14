@@ -9,3 +9,28 @@ body{
     --var--background-color:#2A7AE4;
     --var--background-darkColor:#464646;
 }
+
+.section__title{
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--var--background-darkColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+.show__product--link{
+    text-decoration: none;
+    color: var(--var--background-color);
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1rem;
+}
+
+.product__price{
+    font-weight: bold;
+    color: var(--var--background-darkColor);
+}
