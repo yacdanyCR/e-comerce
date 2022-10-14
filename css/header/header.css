@@ -63,3 +63,35 @@
     color: var(--var--background-color);
     font-weight: 300;
 }
+
+/* Responsive */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .header .container{
+        justify-content: inherit;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .header__search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__search--input{
+        display: none;
+    }
+
+    .header__search--icon{
+        position:absolute;
+        right: 1rem;
+    }
+
+    .header__logo{
+        display: flex;
+    }
+
+    .btn__login{
+        width: 133px;
+    }
+  }
