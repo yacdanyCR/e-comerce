@@ -1,0 +1,65 @@
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 37.5px 152px;
+}
+
+
+.header__cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo{
+    display: flex;
+    margin-right: 2rem;
+}
+
+.header__logo > h1{
+    font-size: 25px;
+}
+
+.header__alura--txt{
+    color: var(--var--background-color);
+    font-weight: bold;
+}
+
+.header__geek--text{
+    font-weight: bold;
+    color: var(--var--background-darkColor);
+}
+
+.header__search--input{
+    border-radius: 20px;
+    border: 0;
+    background-color: #F5F5F5;
+    width: 393px;
+    height: 2rem;
+    padding: 8px 16px;
+}
+
+.header__search--icon{
+    position: relative;
+    right: 3rem;
+}
+
+.btn__login{
+    border: 1px solid #2A7AE4;
+    color: var(--var--background-color);
+    padding: 1rem;
+    width: 182px;
+    background-color: none;
+    background: none;
+}
+
+.btn__login:hover{
+    background-color: lightblue;
+}
+
+.nav__links a{
+    text-decoration: none;
+    color: var(--var--background-color);
+    font-weight: 300;
+}
