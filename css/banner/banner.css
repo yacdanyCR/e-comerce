@@ -15,16 +15,16 @@
 
 .banner__title--h1{
     font-size: 52px;
-    font-weight: 700;
-    color: var(--var--background-darkColor);
+    font-weight: 900;
+    color: #FFFFFF;
     font-style: normal;
 }
 
 .banner__txt{
     margin-top: 10px; 
     font-size: 22px;
-    font-weight: 700;
-    color: var(--var--background-darkColor);
+    font-weight: 300;
+    color:#FFFFFF;
     font-style: normal;
 }
 
