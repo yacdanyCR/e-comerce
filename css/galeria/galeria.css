@@ -5,20 +5,20 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap; 
+    gap: 1rem;
 }
 
 .galery__title{
     display: flex;
     justify-content: space-between;
-    margin: 0 4rem;
+    margin:  4rem;
 }
 
 .galery__container{
     display: flex;
     flex-direction: column;
     width: 176px;
-    height: 174px;
-    margin: 1rem 1rem;
+    height: 174px; 
 }
 
 .galery__container a{
@@ -27,4 +27,11 @@
 
 .galery__container img{
     margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .galeria__section .container{
+        gap: 6rem;
+    }
 }
