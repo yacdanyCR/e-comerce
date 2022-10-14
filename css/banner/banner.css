@@ -1,0 +1,47 @@
+.banner__section .container{
+    position: relative;
+    display: inline-block;
+}
+.banner__img--section{
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.banner__title{
+    position: absolute;
+    top: 50%;
+    left:10%;
+}
+
+.banner__title--h1{
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--var--background-darkColor);
+    font-style: normal;
+}
+
+.banner__txt{
+    margin-top: 10px; 
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--var--background-darkColor);
+    font-style: normal;
+}
+
+.banner__btn{
+    margin-top: 10px;
+    background-color: var(--var--background-color);
+    padding: 1rem;
+    border: 0;
+    height: 51px;
+    font-size: 1rem;
+}
+
+.banner__btn:hover{
+    opacity: 75%;
+}
+
+.banner__btn > a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
