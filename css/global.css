@@ -9,6 +9,7 @@ body{
 :root{
     --var--background-color:#2A7AE4;
     --var--background-darkColor:#464646;
+    --var--background-footer:#EAF2FD;
 }
 
 .section__title{
