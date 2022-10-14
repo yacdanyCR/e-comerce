@@ -1,5 +1,6 @@
 .galeria__section{
     margin-top: 5rem;
+    margin-bottom: 100px;
 }
 .galeria__section .container{
     display: flex;

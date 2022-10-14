@@ -62,4 +62,13 @@ footer{
         flex-direction: column;
         gap: 50px;
     }
+    .footer__logo{
+        justify-content: center;
+    }
+    .footer__link{
+        text-align: center;
+    }
+    .footer__btn{
+        margin: auto;
+    }
 }
