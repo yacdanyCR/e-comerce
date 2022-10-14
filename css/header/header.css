@@ -67,7 +67,7 @@
 /* Responsive */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .header .container{
-        justify-content: inherit;
+        justify-content: center;
         align-items: center;
         margin: 1rem;
     }
@@ -83,8 +83,9 @@
     }
 
     .header__search--icon{
-        position:absolute;
-        right: 1rem;
+        /* position:absolute;
+        right: 1rem; */
+        visibility: hidden;
     }
 
     .header__logo{
