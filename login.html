@@ -41,11 +41,11 @@
             <div class="login">
                 <div class="container">
                     <div class="login__form">
-                        <form action="#" method="post">
+                        <form >
                             <label class="login__title" for="">Iniciar Sesión</label>
-                            <input class="login__input" type="text">
-                            <input class="login__input" type="password">
-                            <button class="login__btn" type="submit" disabled>Iniciar Sesión</button>
+                            <input class="login__input" type="text" data-type="login" data-login="email" >
+                            <input class="login__input" type="password" data-type="login" data-login="password" >
+                            <button class="login__btn" id="login_save" type="submit" data-login="save">Iniciar Sesión</button>
                         </form>
                     </div>
                 </div>
@@ -90,6 +90,7 @@
                 </div>
             </div>
         </section>
-    </footer>  
+    </footer>
+    <script src="app.js" type="module"></script>  
 </body>
 </html>
