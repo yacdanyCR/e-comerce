@@ -1,13 +1,20 @@
 import { authLogin } from "./js/login.js";
+import { inputType } from "./js/validations.js";
 
-const $logUser = document.querySelector('[data-login="save"]');
-const $input = document.querySelectorAll('input');
 const user = {
     email: "admin@hotmail.com",
     password: "123"
 }
-
 localStorage.setItem("User", JSON.stringify(user));
+
+const $logUser = document.querySelector('[data-login="save"]');
+const $input = document.querySelectorAll('input');
+
+$input.forEach(element =>{
+    element.addEventListener("blur",(e)=>{
+        inputType(e.target);
+    })
+})
 
 $logUser.addEventListener("click", (e) => {
     e.preventDefault();
