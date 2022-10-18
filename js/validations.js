@@ -19,7 +19,7 @@ const errorsMessages = {
     },
     password: {
         valueMissing: "El campo contraseña no puede estar vacío",
-        patternMismatch:"Al menos 3 caracteres",
+        patternMismatch: "Al menos 3 caracteres",
     }
 };
 
@@ -31,7 +31,11 @@ const ValidateLogin = (input) => {
             errorMessage = errorsMessages[inputSection][error];
         }
     });
-    return errorMessage;
+    showLoginmessages(input,errorMessage);
+}
+
+const showLoginmessages = (input,errorMessages) => {
+    input.nextElementSibling.innerText=errorMessages;
 }
 
 const validators = {
