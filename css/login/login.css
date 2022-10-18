@@ -34,3 +34,7 @@
     color: #ffffff;
     cursor: pointer;
 }
+
+.login--error{
+    display: hidden;
+}
