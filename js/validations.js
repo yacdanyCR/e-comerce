@@ -10,6 +10,7 @@ const typeErrors = [
     "typeMismatch",
     "patternMismatch",
     "customError",
+    "tooShort"
 ];
 
 const errorsMessages = {
@@ -20,10 +21,12 @@ const errorsMessages = {
     password: {
         valueMissing: "El campo contraseña no puede estar vacío",
         patternMismatch: "Al menos 3 caracteres",
-    }
+        tooShort: "El campo contraseña debe tener al menos 3 caracteres"
+    },
 };
 
 const ValidateLogin = (input) => {
+    console.log(input.validity)
     let errorMessage = "";
     const inputSection = input.dataset.login;
     typeErrors.forEach(error => {
@@ -31,11 +34,13 @@ const ValidateLogin = (input) => {
             errorMessage = errorsMessages[inputSection][error];
         }
     });
-    showLoginmessages(input,errorMessage);
+    showLoginmessages(input, errorMessage);
 }
 
-const showLoginmessages = (input,errorMessages) => {
-    input.nextElementSibling.innerText=errorMessages;
+const showLoginmessages = (input, errorMessages) => {
+    input.nextElementSibling.innerText = errorMessages;
+    input.nextElementSibling.classList.remove('login--correct');
+    input.nextElementSibling.classList.add('login--error');
 }
 
 const validators = {
