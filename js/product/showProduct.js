@@ -1,4 +1,4 @@
-import { getProducts } from "../../db/__db.js";
+import { getProducts } from "../../localStorage/__db.js";
 
 export const showProducts = () => {
     const product=getProducts();
