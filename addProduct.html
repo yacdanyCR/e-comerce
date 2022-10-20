@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/footer/footer.css">
     <title>AluraGeek</title>
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -28,12 +30,13 @@
                     <nav>
                         <ul class="nav__header">
                             <li class="nav__links">
-                                <button class="btn__login"><a class="a" href="pages/login.html">Menu administrador</a></button>
+                                <button class="btn__login"><a class="a" href="pages/login.html">Menu
+                                        administrador</a></button>
                             </li>
                         </ul>
                     </nav>
                 </div>
-              
+
             </div>
         </div>
     </header>
@@ -42,13 +45,13 @@
             <div class="product__section">
                 <div class="container">
                     <div class="product__form">
-                       <h1>Agregar Producto</h1>
-                        <form action="" method="post">
-                            <input type="file">
-                            <input type="text" placeholder="Nombre" data-type="name">
-                            <input type="text" placeholder="Precio">
-                            <input type="text" placeholder="Descripción">
-                            <button type="submit" disabled>Agregar Producto</button>
+                        <h1>Agregar Producto</h1>
+                        <form>
+                            <input type="file" data-type="product" data-product="file">
+                            <input type="text" placeholder="Nombre" data-type="product" data-product="name">
+                            <input type="text" placeholder="Precio" data-type="product" data-product="price">
+                            <input type="text" placeholder="Descripción" data-type="product" data-product="description">
+                            <button type="submit" data-product="save">Agregar Producto</button>
                         </form>
                     </div>
                 </div>
@@ -88,11 +91,15 @@
             <div class="footer__author">
                 <div class="container">
                     <div class="author__footer">
-                        <span>Desarrollado por Yacdany Arguedas Mora <script>document.write(new Date().getFullYear())</script></span>
+                        <span>Desarrollado por Yacdany Arguedas Mora
+                            <script>document.write(new Date().getFullYear())</script>
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
-    </footer> 
+    </footer>
+    <script src="app.js" type="module"></script>  
 </body>
+
 </html>

@@ -1,3 +1,4 @@
+import { ValidateProduct } from "./product/validateProduct.js";
 import { ValidateLogin } from "./login/validatingLogin.js";
 
 export const inputType = (input) => {
@@ -27,6 +28,15 @@ export const errorsMessages = {
     },
 };
 
+export const showingErrorMessages = (input, errorMessages) => {
+    if (!input.validity.valid) {
+        input.nextElementSibling.innerText = errorMessages;
+        input.nextElementSibling.classList.remove('input--correct');
+        input.nextElementSibling.classList.add('input--error');
+    }
+}
+
 const validators = {
-    login: (input) => ValidateLogin(input)
+    login: (input) => ValidateLogin(input),
+    product: (input) => ValidateProduct(input)
 }
