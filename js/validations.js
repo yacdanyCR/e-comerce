@@ -26,7 +26,6 @@ const errorsMessages = {
 };
 
 const ValidateLogin = (input) => {
-    console.log(input.validity)
     let errorMessage = "";
     const inputSection = input.dataset.login;
     typeErrors.forEach(error => {
@@ -38,9 +37,11 @@ const ValidateLogin = (input) => {
 }
 
 const showLoginmessages = (input, errorMessages) => {
-    input.nextElementSibling.innerText = errorMessages;
-    input.nextElementSibling.classList.remove('login--correct');
-    input.nextElementSibling.classList.add('login--error');
+    if(!input.validity.valid){
+        input.nextElementSibling.innerText = errorMessages;
+        input.nextElementSibling.classList.remove('login--correct');
+        input.nextElementSibling.classList.add('login--error');
+    }
 }
 
 const validators = {
