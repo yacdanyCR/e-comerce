@@ -1,4 +1,4 @@
-import { authLogin } from "./js/login.js";
+import { authLogin } from "./js/login/login.js";
 import { inputType } from "./js/validations.js";
 
 const user = {
