@@ -1,4 +1,4 @@
-import { typeErrors, errorsMessages } from "../validations.js";
+import { typeErrors, errorsMessages,showingErrorMessages } from "../validations.js";
 
 export const ValidateLogin = (input) => {
     let errorMessage = "";
@@ -8,13 +8,5 @@ export const ValidateLogin = (input) => {
             errorMessage = errorsMessages[inputSection][error];
         }
     });
-    showLoginmessages(input, errorMessage);
-}
-
-export const showLoginmessages = (input, errorMessages) => {
-    if (!input.validity.valid) {
-        input.nextElementSibling.innerText = errorMessages;
-        input.nextElementSibling.classList.remove('login--correct');
-        input.nextElementSibling.classList.add('login--error');
-    }
+    showingErrorMessages(input, errorMessage);
 }

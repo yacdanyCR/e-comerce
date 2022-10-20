@@ -34,14 +34,3 @@
     color: #ffffff;
     cursor: pointer;
 }
-
-.login--error{
-    color: #D8000C;
-    background-color: #FFBABA;
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.login--correct{
-   display: none;
-}

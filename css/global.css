@@ -36,3 +36,14 @@ a{
     font-weight: bold;
     color: var(--var--background-darkColor);
 }
+
+.input--error{
+    color: #D8000C;
+    background-color: #FFBABA;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.input--correct{
+    visibility: hidden;
+}
