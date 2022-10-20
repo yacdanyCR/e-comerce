@@ -1,4 +1,3 @@
-import { getProducts } from "./db/__db.js";
 import { authLogin } from "./js/login/login.js";
 import { addProduct } from "./js/product/addProduct.js";
 import { showProducts } from "./js/product/showProduct.js";
@@ -15,10 +14,8 @@ const $logUser = document.querySelector('[data-login="save"]') || null;
 const $saveProduct = document.querySelector('[data-product="save"]') || null;
 const $input = document.querySelectorAll('input');
 
-/* document.addEventListener("DOMContentLoaded",(e)=>{
-    showProducts()
-}) */
- 
+document.addEventListener("DOMContentLoaded",showProducts);
+
 $input.forEach(element => {
     element.addEventListener("blur", (e) => {
         inputType(e.target);
