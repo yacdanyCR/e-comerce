@@ -14,7 +14,7 @@ const $logUser = document.querySelector('[data-login="save"]') || null;
 const $saveProduct = document.querySelector('[data-product="save"]') || null;
 const $input = document.querySelectorAll('input');
 
-document.addEventListener("DOMContentLoaded",showProducts);
+document.addEventListener("DOMContentLoaded", showProducts);
 
 $input.forEach(element => {
     element.addEventListener("blur", (e) => {
