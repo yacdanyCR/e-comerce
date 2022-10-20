@@ -24,5 +24,5 @@ $logUser.addEventListener("click", (e) => {
         password: document.querySelector('[data-login="password"') || "",
     }
 
-    authLogin(objUser)
+    authLogin(objUser);
 })
