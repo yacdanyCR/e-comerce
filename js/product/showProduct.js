@@ -1,6 +1,7 @@
 import { getProducts } from "../../localStorage/localStorage.js";
 
 export const showProducts = () => {
+    if(getProducts() === null) return null;
     const product = getProducts();
     const $section = document.querySelector('[data-section="starwars"]');
     const fragment = document.createDocumentFragment();
@@ -12,10 +13,12 @@ export const showProducts = () => {
         const $labelProductPrice = document.createElement("label")
         const $a = document.createElement("a");
 
-        $img.src = "img/products/product.png";
+        $img.src = element.file;
         $div.classList.add("galery__container");
         $labelProductPrice.classList.add("product__price");
         $a.classList.add("show__product--link");
+        $a.href="#";
+        $a.innerText="Ver Producto";
 
         $div.appendChild($img);
         $labelProductName.innerText = element.name;
