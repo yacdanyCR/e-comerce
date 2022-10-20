@@ -1,19 +1,24 @@
 import { getProducts } from "./db/__db.js";
 import { authLogin } from "./js/login/login.js";
 import { addProduct } from "./js/product/addProduct.js";
+import { showProducts } from "./js/product/showProduct.js";
 import { inputType } from "./js/validations.js";
 
 const user = {
     email: "admin@hotmail.com",
     password: "123"
 }
-console.log(getProducts())
+
 localStorage.setItem("User", JSON.stringify(user));
 
 const $logUser = document.querySelector('[data-login="save"]') || null;
 const $saveProduct = document.querySelector('[data-product="save"]') || null;
 const $input = document.querySelectorAll('input');
 
+/* document.addEventListener("DOMContentLoaded",(e)=>{
+    showProducts()
+}) */
+ 
 $input.forEach(element => {
     element.addEventListener("blur", (e) => {
         inputType(e.target);
