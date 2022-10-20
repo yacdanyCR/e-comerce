@@ -1,5 +1,5 @@
 import { authLogin } from "./js/login/login.js";
-import { addProduct } from "./js/product/addProduct.js";
+import { addProduct, convertFileToBase64 } from "./js/product/addProduct.js";
 import { showProducts } from "./js/product/showProduct.js";
 import { inputType } from "./js/validations.js";
 
@@ -23,6 +23,8 @@ $input.forEach(element => {
 })
 
 if ($saveProduct !== null) {
+    const $fileBase64=convertFileToBase64();
+    console.log($fileBase64)
     $saveProduct.addEventListener("click", (e) => {
         e.preventDefault();
         addProduct();
