@@ -1,3 +1,4 @@
+import { getProducts } from "./db/__db.js";
 import { authLogin } from "./js/login/login.js";
 import { addProduct } from "./js/product/addProduct.js";
 import { inputType } from "./js/validations.js";
@@ -6,7 +7,7 @@ const user = {
     email: "admin@hotmail.com",
     password: "123"
 }
-
+console.log(getProducts())
 localStorage.setItem("User", JSON.stringify(user));
 
 const $logUser = document.querySelector('[data-login="save"]') || null;
