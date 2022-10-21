@@ -22,7 +22,7 @@ const cardTemplate = (element) => {
     $div.setAttribute('data-id',element.id);
     $labelProductPrice.classList.add("product__price");
     $a.classList.add("show__product--link");
-    $a.href = `#`;
+    $a.href = `showProduct.html`;
     $a.innerText = "Ver Producto";
 
     $div.appendChild($img);

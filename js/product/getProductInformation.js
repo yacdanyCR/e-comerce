@@ -1,16 +1,24 @@
 export const getProductInformation = () => {
     const $a = document.querySelectorAll("a") || null;
-    let productId = null;
     $a.forEach(element => {
         element.addEventListener("click", (e) => {
-            productId = e.target.parentNode.dataset.id;
-            findLocalStorageElement(productId);
+            sessionStorage.setItem("ProductId", e.target.parentNode.dataset.id);
         });
     });
 }
 
-const findLocalStorageElement = (productId) => {
-    const products=JSON.parse(localStorage.getItem("Product"));
+export const showProductDescription = () => {
+    const $productName = document.querySelector('[data-product-info="name"]');
+    const $productPrice = document.querySelector('[data-product-info="price"]');
+    const $productImg = document.querySelector('[data-product-info="img"]');
+    const $productDescription=document.querySelector('[data-product-info="description"]');
 
-    console.log(products.find((el) => el.id === productId))
+    const productToFind = sessionStorage.getItem("ProductId");
+    const products = JSON.parse(localStorage.getItem("Product"));
+    const product=products.find((el)=>el.id === productToFind);
+
+    $productImg.src=product.file;
+    $productName.innerText=product.name;
+    $productPrice.innerText=product.price;
+    $productDescription.innerText=product.description;
 }
