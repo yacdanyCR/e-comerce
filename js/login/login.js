@@ -8,8 +8,9 @@ export const authLogin = ({ email, password }) => {
     }
 }
 
-export const changinLoginButtonState = () => {
-    const $loginButton = document.querySelector('[data-button="login"]');
-    $loginButton.href = "addProduct.html";
-    $loginButton.innerText = "Menú Administrador";
-} 
+export const changinLoginButtonState = ($loginButton,userLogIn) => {
+    if(userLogIn === "true"){
+        $loginButton.innerText="Menu administracion";
+        $loginButton.href="addProduct.html";
+    }
+}

@@ -8,7 +8,7 @@ const user = {
     email: "admin@hotmail.com",
     password: "123"
 }
-
+const userLogIn = sessionStorage.getItem("login");
 localStorage.setItem("User", JSON.stringify(user));
 
 const $logUser = document.querySelector('[data-login="save"]') || null;
@@ -22,9 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getProductInformation();
 });
 
-if ((JSON.stringify(sessionStorage.getItem("login") === true)) && ($loginButton !== null)) {
-    changinLoginButtonState();
-}
+changinLoginButtonState($loginButton, userLogIn);
 
 $input.forEach(element => {
     element.addEventListener("blur", (e) => {
