@@ -5,22 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/descriptionProduct/descriptionProduct.css">
     <title>Ecommerce</title>
 </head>
 
 <body>
-    <h1>Showing Product</h1>
-    <script>
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-        const parameter=getParameterByName(id);
-
-        console.log(parameter)
-    </script>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="header__cont">
+                    <div class="header__logo">
+                        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <input class="header__search--input" type="text" placeholder="¿Que deseas buscar?">
+                    <object class="header__search--icon" data="./img/search__logo.svg" type=""></object>
+                </div>
+                <div class="header__nav">
+                    <nav>
+                        <ul class="nav__header">
+                            <li class="nav__links">
+                                <button class="btn__login"><a class="a" href="login.html">Login</a></button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+              
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product__description">
+            <div class="container">
+                <div class="product__information">
+                    <div class="product__img">
+                        <img class="product__img--section" src="img/banner.jpg" alt="">
+                    </div>
+                    <div class="product__information--section">
+                        <span class="product__title">Title</span>
+                        <span class="product__price">Price</span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis, non rem reprehenderit quidem, debitis doloribus maiores voluptates, quasi placeat nobis. Animi aliquid ab quidem omnis vel adipisci repellendus nisi.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa obcaecati quisquam dolores debitis sunt eius! Maiores, exercitationem? Reprehenderit officiis autem commodi animi sit cumque quas quis porro fuga culpa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <div class="banner__footer">
+                <div class="container">
+                    <div class="footer__logo">
+                        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+                    </div>
+                    <div class="footer__quienes_somos">
+                        <ul>
+                            <li class="footer__link"><a href="#">Quienes Somos</a></li>
+                            <li class="footer__link"><a href="#">Quienes Somos</a></li>
+                            <li class="footer__link"><a href="#">Quienes Somos</a></li>
+                            <li class="footer__link"><a href="#">Quienes Somos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__form">
+                        <div class="form__title">
+                            <h1 class="footer__link form__h1--title">Hable con nosotros</h1>
+                        </div>
+                        <form action="#" method="post">
+                            <input class="footer__link footer__input" type="text" placeholder="Nombre">
+                            <textarea class="footer__link footer__input" name="mensaje" id="" cols="50" rows="20"
+                                placeholder="Escribe tu mensaje"></textarea>
+                            <button class="footer__link footer__btn" type="submit" disabled>Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="footer__author">
+                <div class="container">
+                    <div class="author__footer">
+                        <span>Desarrollado por Yacdany Arguedas Mora <script>document.write(new Date().getFullYear())</script></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="app.js" type="module"></script>
 </body>
 
 </html>
