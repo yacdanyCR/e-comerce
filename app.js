@@ -1,4 +1,4 @@
-import { authLogin } from "./js/login/login.js";
+import { authLogin, changinLoginButtonState } from "./js/login/login.js";
 import { addProduct, convertFileToBase64 } from "./js/product/addProduct.js";
 import { getProductInformation, showProductDescription } from "./js/product/getProductInformation.js";
 import { showProducts } from "./js/product/showProduct.js";
@@ -8,18 +8,21 @@ const user = {
     email: "admin@hotmail.com",
     password: "123"
 }
-
+const userLogIn = sessionStorage.getItem("login");
 localStorage.setItem("User", JSON.stringify(user));
 
 const $logUser = document.querySelector('[data-login="save"]') || null;
 const $saveProduct = document.querySelector('[data-product="save"]') || null;
 const $input = document.querySelectorAll('input');
 const $product__information_page = document.querySelector('.product__information') || null;
+const $loginButton = document.querySelector('[data-button="login"]') || null;
 
 document.addEventListener("DOMContentLoaded", () => {
     showProducts();
     getProductInformation();
 });
+
+changinLoginButtonState($loginButton, userLogIn);
 
 $input.forEach(element => {
     element.addEventListener("blur", (e) => {
@@ -28,7 +31,7 @@ $input.forEach(element => {
 });
 
 if ($product__information_page !== null) {
-    document.addEventListener("DOMContentLoaded",showProductDescription);
+    document.addEventListener("DOMContentLoaded", showProductDescription);
 }
 
 if ($saveProduct !== null) {
