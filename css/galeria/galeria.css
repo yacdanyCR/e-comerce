@@ -9,6 +9,15 @@
     gap: 5rem;
 }
 
+.search__Result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
 .galery__title{
     display: flex;
     justify-content: space-between;
