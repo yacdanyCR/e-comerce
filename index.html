@@ -24,8 +24,8 @@
                     </div>
                 </div>
                 <div class="header__search">
-                    <input class="header__search--input" type="text" placeholder="¿Que deseas buscar?">
-                    <object class="header__search--icon" data="./img/search__logo.svg" type=""></object>
+                    <input class="header__search--input" type="text" placeholder="¿Que deseas buscar?" data-input="search">
+                    <object class="header__search--icon" data="./img/search__logo.svg" type="" ></object>
                 </div>
                 <div class="header__nav">
                     <nav>
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="search__Result" data-list="search_Result">
             <div class="galeria__section">
                 <div class="galery__title">
                     <h1 class="section__title">Star Wars</h1>
@@ -234,6 +234,7 @@
         </section>
     </footer>
     <script src="app.js" type="module"></script>
+    <script src="js/seach/search.js" type="module"></script>
 </body>
 
 </html>
